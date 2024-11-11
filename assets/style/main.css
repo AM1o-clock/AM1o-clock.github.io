@@ -1,0 +1,589 @@
+@charset "UTF-8";
+
+/* ページ全体のスタイル
+------------------------------------------ */
+html {
+  font-size: 62.5%;
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: "Zen Maru Gothic", serif;
+  color: #3e243c;
+  font-size: 1.4rem;
+  line-height: 1.5;
+  margin: 0;
+}
+
+a {
+  text-decoration: none;
+  color: #3e243c;
+  ;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+  vertical-align: bottom;
+}
+
+li {
+  list-style: none;
+}
+
+/* 共通スタイル
+------------------------------------------ */
+.container {
+  width: calc(100vw - 3.2rem);
+  margin: 0 auto;
+}
+
+.flex {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.no-sp {
+  display: none;
+}
+
+.section__title {
+  font-size: 3rem;
+  font-weight: 700;
+  margin-bottom: 1.6rem;
+}
+
+@media (min-width: 768px) {
+  .container {
+    width: calc(100vw - 36rem);
+    max-width: 108rem;
+  }
+
+  .flex {
+    flex-direction: row;
+  }
+
+  .no-sp {
+    display: block;
+  }
+
+  .no-pc {
+    display: none;
+  }
+
+}
+
+
+
+/* ヘッダー
+------------------------------------------ */
+.header {
+  width: 100%;
+  height: 11.4rem;
+  background-color: rgba(255, 255, 255, .1);
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 1;
+}
+
+.header__container.flex {
+  justify-content: space-between;
+}
+
+.header__container h1 {
+  line-height: 1;
+}
+
+.hamburger__button {
+  display: none;
+}
+
+.hamburger__menu {
+  width: 26.2rem;
+}
+
+.header__nav.container {
+  width: 100%;
+}
+
+.header__nav--list.flex {
+  justify-content: space-between;
+  margin-bottom: 2rem;
+}
+
+.nav__list--item a {
+  font-size: 1.6rem;
+  font-weight: 700;
+  color: #3e243c;
+}
+
+.nav__button--contact {
+  font-size: 1.6rem;
+  font-weight: 700;
+  color: #3e243c;
+  border: 1px solid #3e243c;
+  padding: .8rem 1.6rem;
+  border-radius: 1.6rem;
+}
+
+.nav__button--contact i {
+  margin-left: .8rem;
+}
+
+@media (max-width: 767px) {
+  .header {
+    height: 6.3rem;
+    background-color: inherit;
+  }
+
+  .header__container.flex {
+    flex-direction: row;
+    justify-content: flex-end;
+  }
+
+  .header__container h1 {
+    display: none;
+  }
+
+  .hamburger__button.flex {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 2.4rem;
+    height: 1.8rem;
+  }
+
+  .hamburger__button--bar {
+    width: 100%;
+    height: .2rem;
+    background-color: #3e243c;
+  }
+
+  .hamburger__menu {
+    width: calc(100vw - 3.2rem);
+    height: 23rem;
+    background-color: #cec4e5;
+    padding-top: 2rem;
+    padding-bottom: 2rem;
+    border-radius: 2.4rem;
+    position: fixed;
+    top: 7.8rem;
+    left: 100%;
+    transition: all .3s;
+    visibility: hidden;
+  }
+
+  .hamburger__menu--active {
+    left: 1.6rem;
+    visibility: visible;
+  }
+
+  .header__nav--list.flex {
+    flex-direction: column;
+    row-gap: 2rem;
+  }
+
+  .nav__list--item a {
+    font-size: 1.8rem;
+    color: #3e243c;
+  }
+
+}
+
+
+/*About Me
+------------------------------------------ */
+.aboutMe {
+  background-image: linear-gradient(0deg, rgba(255, 228, 227, 1), rgba(225, 193, 209, 1) 33%, rgba(172, 136, 198, 1) 63%, rgba(130, 122, 181, 1));
+  padding-bottom: 6.4rem;
+}
+
+.aboutMe__top {
+  width: calc(100% - 3.2rem);
+  margin-top: 8rem;
+  margin-bottom: 8.4rem;
+}
+
+.aboutMe__top img {
+  width: 18.5rem;
+  height: 18.5rem;
+  border-radius: 50%;
+  object-position: center;
+  object-fit: cover;
+  margin-top: 3.6rem;
+  margin-bottom: 3.6rem;
+}
+
+.aboutMe__text--name {
+  align-items: flex-start;
+  width: 100%;
+  height: 8rem;
+  border-bottom: 4px solid;
+  border-image: linear-gradient(90deg, rgba(62, 36, 60, .8), rgba(255, 255, 255, 0) 70%) 1;
+  background-color: rgba(255, 255, 255, .5);
+  font-weight: 700;
+  line-height: 1.4;
+  padding-top: .2rem;
+  padding-left: 1.6rem;
+}
+
+.name--english {
+  font-size: 1.6rem;
+}
+
+.name--japanese {
+  font-size: 3.6rem;
+}
+
+.aboutMe__top p {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  font-size: 1.8rem;
+  line-height: calc(28/16);
+  letter-spacing: -.15rem;
+}
+
+.aboutMe__bottom {
+  width: calc(100% - 3.2rem);
+}
+
+
+/*Skills
+------------------------------------------ */
+.skills {
+  background-color: #ffe6e5;
+}
+
+.skills__container {
+  padding-top: 4.8rem;
+}
+
+.skills__list--item {
+  width: 100%;
+  background-color: rgba(255, 255, 255, .5);
+  border-radius: 1.6rem;
+  margin-bottom: 3.6rem;
+}
+
+.skills__item--title {
+  font-size: 2.4rem;
+  font-weight: 700;
+  margin-top: 1.6rem;
+  margin-bottom: 1.2rem;
+}
+
+.skills__item--content {
+  width: calc(100% - 3.2rem);
+  margin-bottom: 2.4rem;
+}
+
+.skills__item--img {
+  width: 100%;
+  aspect-ratio: 16/9;
+  border-radius: 1.6rem;
+  object-fit: cover;
+  object-position: center;
+  margin-bottom: 1.2rem;
+}
+
+
+/*Works
+------------------------------------------ */
+.works {
+  background-image: linear-gradient(0deg, rgba(130, 122, 181, 1), rgba(172, 136, 198, 1) 33%, rgba(225, 193, 209, 1) 66%, rgba(255, 228, 227, 1));
+
+}
+
+.works__container {
+  padding-top: 4.8rem;
+  padding-bottom: 2.4rem;
+}
+
+.works__item--box {
+  width: 100%;
+  background-color: rgba(255, 255, 255, .5);
+  border-radius: 1.6rem;
+  padding-bottom: 2.4rem;
+  margin-bottom: 3.6rem;
+}
+
+.works__item--img {
+  width: calc(100% - 3.2rem);
+  aspect-ratio: 16/9;
+  border-radius: 1.6rem;
+  object-fit: cover;
+  object-position: center;
+}
+
+.works__item--text {
+  width: calc(100% - 3.2rem);
+}
+
+.works__item--title {
+  font-size: 2.4rem;
+  font-weight: 700;
+  margin-bottom: 1.2rem;
+}
+
+.works__item--badge {
+margin-bottom: 1.2rem;
+}
+
+.works__item--badge span {
+  font-size: 1.2rem;
+  color: #fff;
+  background-color: #d9809e;
+  padding: .4rem .8rem;
+  border-radius: .8rem;
+  margin-right: .8rem;
+}
+
+
+
+/*フッター
+------------------------------------------ */
+.footer {
+  width: 100%;
+  height: 6.8rem;
+  background-color: #3e243c;
+}
+
+.footer__nav--list {
+  width: 21.6rem;
+  height: 1.4rem;
+  flex-direction: row;
+  justify-content: space-between;
+  position: relative;
+}
+
+.footer__nav--list li a {
+  font-size: 1.4rem;
+  color: #fff;
+}
+
+@media (min-width: 768px) {
+  .footer {
+    width: 100%;
+    height: 9.6rem;
+  }
+
+  .footer__nav--list {
+    width: 24.4rem;
+  }
+}
+
+
+/*共通パーツ
+------------------------------------------ */
+/*ギャラリー
+------------------------------------------ */
+.price__gallery--container {
+  margin-top: 2.4rem;
+  margin-bottom: 4.7rem;
+}
+
+.swiper {
+  overflow: hidden;
+  width: 100%;
+  z-index: 0;
+}
+
+.swiper__item {
+  width: 100%;
+  height: 23.7rem;
+  border-radius: 2.4rem;
+  object-fit: cover;
+  object-position: center;
+}
+
+.swiper-pagination-bullets.swiper-pagination-horizontal,
+.swiper-pagination-custom,
+.swiper-pagination-fraction {
+  bottom: .9rem;
+}
+
+.swiper-pagination-horizontal.swiper-pagination-bullets .swiper-pagination-bullet {
+  width: .8rem;
+  height: .8rem;
+  margin-left: .3rem;
+  margin-right: .3rem;
+  background: #eee;
+  cursor: pointer;
+  opacity: 1;
+}
+
+.swiper-pagination-horizontal.swiper-pagination-bullets .swiper-pagination-bullet.swiper-pagination-bullet-active {
+  background: #3e243c;
+}
+
+@media (min-width: 768px) {
+  .price__gallery--container {
+    margin-top: 3.7rem;
+    margin-bottom: 4.3rem;
+  }
+
+  .swiper__item {
+    width: 100%;
+    height: 50rem;
+  }
+
+  .swiper-pagination-bullets.swiper-pagination-horizontal,
+  .swiper-pagination-custom,
+  .swiper-pagination-fraction {
+    bottom: 2.2rem;
+  }
+
+}
+
+/*
+------------------------------------------ */
+.faq.container {
+  max-width: 35.8rem;
+  margin-top: 3.9rem;
+  margin-bottom: 16.6rem;
+}
+
+.accordion.flex {
+  flex-direction: column;
+  row-gap: 2rem;
+}
+
+.accordion__item {
+  width: 100%;
+  padding: 2.3rem 2.3rem 1.5rem;
+  border: 1px solid #ccc;
+  border-radius: 1.6rem;
+  transition: .3s;
+  position: relative;
+}
+
+.accordion__item.open {
+  margin-bottom: .4rem;
+}
+
+.accordion__item--question {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  width: 100%;
+  margin-bottom: .2rem;
+}
+
+.accordion__item--question::after {
+  font-family: "bootstrap-icons";
+  content: "\F4FE";
+  font-size: 4rem;
+  position: absolute;
+  top: 1.6rem;
+  right: 1.3rem;
+  z-index: 1;
+}
+
+.accordion__item--question.open::after {
+  content: '\F2EA';
+}
+
+.question__title--top {
+  display: flex;
+  align-items: center;
+}
+
+.question__title--Q {
+  font-family: "Montserrat", sans-serif;
+  font-size: 2.4rem;
+  font-weight: 700;
+  color: #168352;
+  margin-right: 1.6rem;
+  margin-top: -.2rem;
+}
+
+.question__title--badge {
+  width: 10rem;
+  height: 2.4rem;
+  border-radius: .4rem;
+  border: #3e243c solid 1px;
+  font-size: 1.1rem;
+  color: #3e243c;
+  text-align: center;
+  padding: .5rem 0;
+  margin-right: .8rem;
+}
+
+.question__title--text {
+  font-size: 1.6rem;
+  font-weight: 700;
+  line-height: 1.75;
+  letter-spacing: .01rem;
+  line-break: anywhere;
+  width: 23.1rem;
+  padding-left: .2rem;
+  margin: 0 auto;
+}
+
+.accordion__item--answer {
+  font-size: 1.6rem;
+  line-height: 1.75;
+  letter-spacing: .01rem;
+  margin-top: .2rem;
+  margin-bottom: .2rem;
+  line-break: anywhere;
+}
+
+
+@media (min-width: 768px) {
+  .faq.container {
+    max-width: 80rem;
+    margin-top: 6.2rem;
+    margin-bottom: 7.2rem;
+  }
+
+  .accordion.flex {
+    flex-direction: column;
+    row-gap: 2.4rem;
+  }
+
+  .accordion__item {
+    padding: 2.3rem 3.2rem 1.5rem;
+  }
+
+  .accordion__item.open {
+    margin-bottom: 0;
+  }
+
+
+  .accordion__item--question {
+    margin-bottom: .1rem;
+  }
+
+  .accordion__item--question::after {
+    right: 2.1rem;
+  }
+
+  .question__title--Q {
+    margin-right: 1.5rem;
+    margin-left: -.1rem;
+    margin-top: -.6rem;
+  }
+
+  .question__title--text {
+    font-size: 1.8rem;
+    width: 67.5rem;
+    padding-left: 1rem;
+    margin-top: .8rem;
+  }
+
+  .accordion__item--answer {
+    letter-spacing: 0;
+    margin-top: 1.7rem;
+    margin-bottom: .3rem;
+  }
+
+}
