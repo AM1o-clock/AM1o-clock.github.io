@@ -12,10 +12,10 @@ $(window).on('resize', function () {
 
 // アコーディオン
 $(function () {
-  $('.accordion__item--answer').hide();
-  $('.accordion__item--question').on('click', function () {
+  $('.works__item--description').hide();
+  $('.works__item--title').on('click', function () {
     $(this).toggleClass("open");
-    $(this).next().slideToggle();
+    $(this).next().next().slideToggle();
     $(this).parent().toggleClass("open");
 
   });
@@ -29,7 +29,7 @@ const mySwiper = new Swiper('.swiper', {
   speed: 500, // スライドアニメーションのスピード（ミリ秒）
 
   autoplay: { // 自動再生させる
-    delay: 3000, // 次のスライドに切り替わるまでの時間（ミリ秒）
+    delay: 5000, // 次のスライドに切り替わるまでの時間（ミリ秒）
     disableOnInteraction: false, // ユーザーが操作しても自動再生を止めない
     waitForTransition: false, // アニメーションの間も自動再生を止めない（最初のスライドの表示時間を揃えたいときに）
   },
