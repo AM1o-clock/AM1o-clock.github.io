@@ -1,3 +1,11 @@
+$(".contents__hole").hide()
+$(".password button").on("click", () => {
+    if ($(".password input").val() === "portfoliopass") {
+        $(".contents__hole").show();
+        $(".password").hide();
+    }
+})
+
 //ハンバーガーメニュー
 var hamburger = $('.hamburger-menu');
 var section = $('.header-nav-list-item');

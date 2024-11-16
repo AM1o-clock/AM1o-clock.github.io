@@ -1,3 +1,11 @@
+$(".contents__hole").hide()
+$(".password button").on("click", () => {
+  if ($(".password input").val() === "portfoliopass") {
+    $(".contents__hole").show();
+    $(".password").hide();
+  }
+})
+
 const mySwiper = new Swiper('.swiper', {
   slidesPerView: 'auto', // コンテナ内に表示させるスライド数（CSSでサイズ指定する場合は 'auto'）
   spaceBetween: 15, // スライド間の余白（px）

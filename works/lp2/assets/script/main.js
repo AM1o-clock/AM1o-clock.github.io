@@ -1,3 +1,11 @@
+$(".contents__hole").hide()
+$(".password button").on("click", () => {
+  if ($(".password input").val() === "portfoliopass") {
+    $(".contents__hole").show();
+    $(".password").hide();
+  }
+})
+
 
 // Slick
 $('.carousel').slick({
@@ -18,8 +26,6 @@ $('.carousel').slick({
       }
     },]
 });
-
-
 
 
 // アコーディオン

@@ -33,6 +33,22 @@ li {
 
 /* 共通スタイル
 ------------------------------------------ */
+.password {
+    margin-top: 1.6rem;
+    margin-left: 1.6rem;
+    font-size: 1.6rem;
+}
+
+.password button {
+    width: 8.4rem;
+    height: 2.4rem;
+    margin-left: .8rem;
+    background-color: #cec4e5;
+    border-radius: 1.6rem;
+    border: solid 1px #3e243d;
+    color: #3e243d;
+}
+
 
 .container {
     width: 100%;
@@ -103,7 +119,7 @@ li {
     margin-bottom: 0;
 }
 
-.contact__button--container{
+.contact__button--container {
     display: flex;
     flex-direction: column;
 }
@@ -171,7 +187,7 @@ li {
         margin-left: 0;
     }
 
-    .contact__button--container{
+    .contact__button--container {
         flex-direction: row;
     }
 

@@ -9,20 +9,6 @@ $(window).on('resize', function () {
 });
 
 
-
-// アコーディオン
-$(function () {
-  $('.works__item--title').on('click', function () {
-    $(this).toggleClass("open");
-    $(this).next().next().toggleClass("open");
-  });
-
-  $('.works__item--description').on('click', function () {
-    $(this).toggleClass("open");
-  });
-});
-
-
 // カルーセル
 const mySwiper = new Swiper('.swiper', {
   slidesPerView: 1, // コンテナ内に表示させるスライド数（CSSでサイズ指定する場合は 'auto'）
